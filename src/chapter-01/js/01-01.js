@@ -9,8 +9,8 @@ function init() {
   var axes = new THREE.AxesHelper(20)
   // x-red, y-green, z-blue
 
-  scene.add(axes)
   // adding the axis to the sreen
+  scene.add(axes)
 
   var planeGeometry = new THREE.PlaneGeometry(60, 20)
 
@@ -18,8 +18,12 @@ function init() {
   var planeMaterial = new THREE.MeshBasicMaterial({
     color: 0x7a4ed7,
   })
+
+  // create a plane by combining the Geometry and the material in a plane object
   var plane = new THREE.Mesh(planeGeometry, planeMaterial)
-  plane.rotation.x = -0.5 * Math.PI
+
+  // before adding the plane to the scene, first position it correctly
+  plane.rotation.x = -0.5 * Math.PI // this line makes the plane lie flat
   plane.position.set(15, 0, 0)
   scene.add(plane)
 }

@@ -23,6 +23,7 @@ function init() {
 
   // rotate and position the plane
   plane.rotation.x = -0.5 * Math.PI
+  console.log(Math.PI * -0.5)
   plane.position.set(15, 0, 0)
 
   // add the plane to the scene
