@@ -7,9 +7,14 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight)
 
   var axes = new THREE.AxesHelper(20)
+  // x-red, y-green, z-blue
+
   scene.add(axes)
+  // adding the axis to the sreen
 
   var planeGeometry = new THREE.PlaneGeometry(60, 20)
+
+  // to define the texture and type of material
   var planeMaterial = new THREE.MeshBasicMaterial({
     color: 0x7a4ed7,
   })
